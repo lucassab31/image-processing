@@ -71,8 +71,8 @@ def convolutionfilter(imgBruit):
     return image_filtre
 
 
-imgR = io.imread('imgR.png', as_gray=True)
-imgB = io.imread('imgB.png', as_gray=True)
+imgR = io.imread('ressources/imgR.png', as_gray=True)
+imgB = io.imread('ressources/imgB.png', as_gray=True)
 
 print ("SNR = ", snr(imgR, imgB))
 
@@ -80,17 +80,13 @@ imgGaussian = addGaussianNoise(imgR)
 imgSNP = addSaltNPepper(imgR)
 imgMultiplicative = addMultiplicativeNoise(imgR)
 
-# =============================================================================
-# imgSNPFiltre = medianfilter(imgSNP)
-# imgGaussianFiltre = convolutionfilter(imgGaussian)
-# =============================================================================
+imgSNPFiltre = medianfilter(imgSNP)
+imgGaussianFiltre = convolutionfilter(imgGaussian)
 
-io.imsave("NoiseGaussian.png", imgGaussian)
-io.imsave("NoiseSalt-Pepper.png", imgSNP)
-io.imsave("NoiseMultiplicative.png", imgMultiplicative)
+io.imsave("ressources/noise/NoiseGaussian.png", imgGaussian)
+io.imsave("ressources/noise/NoiseSalt-Pepper.png", imgSNP)
+io.imsave("ressources/noise/NoiseMultiplicative.png", imgMultiplicative)
 
-# =============================================================================
-# io.imsave("NoiseSalt-PepperFiltre.png", imgSNPFiltre)
-# io.imsave("NoiseGaussianFilter.png", imgGaussianFiltre)
-# =============================================================================
+io.imsave("ressources/filter/NoiseSalt-PepperFiltre.png", imgSNPFiltre)
+io.imsave("ressources/filter/NoiseGaussianFilter.png", imgGaussianFiltre)
 #io.imshow(imgSNP, cmap='gray')
