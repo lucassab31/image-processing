@@ -2,11 +2,10 @@
 """
 Created on Thu Sep 17 14:14:24 2020
 
-@author: luqui
+@author: CERVERA Maxime && SABATHE Lucas
 """
 
 import numpy as np
-
 from skimage import io
 
 def snr(imgRef, imgBruit):
