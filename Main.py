@@ -36,10 +36,12 @@ imgMultiplicative = Noise.addMultiplicativeNoise(imgR)
 io.imsave("ressources/noise/NoiseGaussian.png", imgGaussian)
 io.imsave("ressources/noise/NoiseSalt-Pepper.png", imgSNP)
 io.imsave("ressources/noise/NoiseMultiplicative.png", imgMultiplicative)
-
-""" Filtering images """
-imgSNPFiltre = Filter.medianfilter(imgSNP)
-imgGaussianFiltre = Filter.convolutionfilter(imgGaussian)
-""" Saving filtered images """
-io.imsave("ressources/filter/NoiseSalt-PepperFiltre.png", imgSNPFiltre)
-io.imsave("ressources/filter/NoiseGaussianFilter.png", imgGaussianFiltre)
+# =============================================================================
+# 
+# """ Filtering images """
+# imgSNPFiltre = Filter.medianfilter(imgSNP)
+# imgGaussianFiltre = Filter.convolutionfilter(imgGaussian)
+# """ Saving filtered images """
+# io.imsave("ressources/filter/NoiseSalt-PepperFiltre.png", imgSNPFiltre)
+# io.imsave("ressources/filter/NoiseGaussianFilter.png", imgGaussianFiltre)
+# =============================================================================

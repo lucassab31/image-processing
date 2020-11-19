@@ -16,7 +16,6 @@ def addGaussianNoise(img):
     for y in range(noise.shape[1]):
         for x in range(noise.shape[0]):
             noise[y, x] = int(noise[y, x])
-    noise[noise < 0] = 0
     noisy_img = img + noise
     noisy_img[noisy_img < 0] = 0
     noisy_img[noisy_img > 255] = 255
