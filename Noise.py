@@ -34,12 +34,8 @@ def addSaltNPepper(img):
 
 """ ADDING Multiplicative Noise """
 def addMultiplicativeNoise(img):
-    noise = np.random.normal(0, 5, img.shape)
-    for y in range(noise.shape[1]):
-        for x in range(noise.shape[0]):
-            noise[y, x] = int(noise[y, x])
-    noise[noise < 0] = 0
-    noisy_img = img * (1 + noise)
+    noise = np.random.randint(0, 10, img.shape)/10
+    noisy_img = img / (1 + noise)
     noisy_img[noisy_img < 0] = 0
     noisy_img[noisy_img > 255] = 255
     return np.uint8(noisy_img)
